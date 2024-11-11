@@ -1,13 +1,10 @@
 import style from "./app.module.css";
+import { useFetch } from "./useFetch";
 
 function App() {
-  // const { data, isLoading, error, refetch } = useFetch(
-  //   "https://jsonplaceholder.typicode.com/posts"
-  // );
-  const data = [];
-  const isLoading = false;
-  const error = false;
-  const refetch = () => {};
+  const { data, isLoading, error, refetch } = useFetch(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
 
   return (
     <div className={style.wrapper}>
