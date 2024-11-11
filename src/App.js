@@ -1,33 +1,18 @@
 import style from "./app.module.css";
-import { useFetch } from "./useFetch";
+import { useLocalStorage } from "./hooks/useLocalStorage.ts";
 
 function App() {
-  const { data, isLoading, error, refetch } = useFetch(
-    "https://jsonplaceholder.typicode.com/posts"
-  );
+  const [value, { setItem, removeItem }] = useLocalStorage("some-key");
 
   return (
     <div className={style.wrapper}>
-      <div className={style.buttons}>
-        <button
-          onClick={() =>
-            refetch({
-              params: {
-                _limit: 3,
-              },
-            })
-          }
-        >
-          Перезапросить
+      <p>Значение из LocalStorage: {value}</p>
+      <div>
+        <button onClick={() => setItem("new storage value")}>
+          Задать значение
         </button>
+        <button onClick={() => removeItem()}>Удалить значение</button>
       </div>
-      {isLoading && "Загрузка..."}
-      {error && "Произошла ошибка"}
-      {data &&
-        !isLoading &&
-        data?.map((item, i) => (
-          <div key={item.id}>{`${i + 1}) ${item.title}`}</div>
-        ))}
     </div>
   );
 }
