@@ -1,16 +1,15 @@
 import style from "./app.module.css";
-import { useWindowScroll } from "./hooks/useWindowScroll";
+import { useToggle } from "./hooks/useToggle";
 
 function App() {
-  const [scroll, scrollTo] = useWindowScroll();
+  const [value, toggle] = useToggle(["light", "dark"]);
 
   return (
-    <div style={{height: 2000, width: 1000}}>
-      <p style={{margin: '30px 0 0 0'}}>
-        Scroll position x: {scroll.x}, y: {scroll.y}
-      </p>
-      <button onClick={() => scrollTo({ y: 0 })}>Scroll to top</button>
-    </div>
+    <>
+      <p>{value.toString()}</p>
+      <button onClick={() => toggle()}>toggle</button>
+      <button onClick={() => toggle("dark")}>toggle("dark")</button>
+    </>
   );
 }
 
