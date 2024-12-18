@@ -1,0 +1,185 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  margin-bottom: 4px;
+  display: inline-block;
+  width: auto;
+  cursor: default;
+  align-items: flex-start;
+  font-size: 14px;
+  font-weight: 500;
+}
+.description {
+  color: #858e96;
+  margin: 0px;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+input::placeholder {
+  color: #c4c4c4;
+  font-size: 14.5px;
+}
+input:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* *REQUIRED* */
+/**/
+label .required {
+  color: red;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+/* *VARIANT* */
+/**/
+/* FILLED */
+.variantFilled {
+  background-color: #f1f3f5;
+  border: none;
+}
+.variantFilled:focus {
+  box-shadow: 0 0 0 1px rgba(34, 148, 255, 0.596);
+}
+/* UNSTYLED */
+.variantUnstyled {
+  background-color: transparent;
+  border: none;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.variantUnstyled:focus {
+  box-shadow: none;
+}
+
+/* *ERROR* */
+/**/
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 0px;
+  margin-top: 3px;
+}
+.errorInput {
+  color: red;
+  border-color: red;
+  border: 1px solid red;
+}
+.errorInput:focus {
+  border-color: red;
+  box-shadow: 0 0 0 0;
+}
+.errorInput::placeholder {
+  color: rgb(255, 92, 92);
+}
+.variantUnstyled.errorInput {
+  border: none;
+}
+.variantUnstyled.errorInput:focus {
+  border: 1px solid red;
+}
+
+/* *DISABLED* */
+/**/
+.disabledInput {
+  cursor: not-allowed;
+}
+
+/* *SIZE* */
+/**/
+/* XS */
+.label.sizeXs {
+  font-size: 12px;
+}
+.description.sizeXs {
+  font-size: 10px;
+}
+input.sizeXs {
+  padding: 4px 14px;
+}
+.sizeXs::placeholder {
+  font-size: 12.5px;
+}
+.error.sizeXs {
+  font-size: 10px;
+}
+/* MD */
+.label.sizeMd {
+  font-size: medium;
+}
+.description.sizeMd {
+  font-size: small;
+}
+input.sizeMd {
+  padding: 10px 14px;
+}
+.sizeMd::placeholder {
+  font-size: 16px;
+}
+.error.sizeMd {
+  font-size: small;
+}
+/* LG */
+.label.sizeLg {
+  font-size: 18px;
+}
+.description.sizeLg {
+  font-size: 16px;
+}
+input.sizeLg {
+  padding: 14px 14px;
+}
+.sizeLg::placeholder {
+  font-size: 18px;
+}
+.error.sizeLg {
+  font-size: 16px;
+}
+/* XL */
+.label.sizeXl {
+  font-size: 20px;
+}
+.description.sizeXl {
+  font-size: 17px;
+}
+input.sizeXl {
+  padding: 19px 14px;
+}
+.sizeXl::placeholder {
+  font-size: 20px;
+}
+.error.sizeXl {
+  font-size: 17px;
+}
+
+/* *RADIUS* */
+/**/
+/* XS */
+.radiusXs {
+  border-radius: 0px;
+}
+/* MD */
+.radiusMd {
+  border-radius: 7px;
+}
+/* LG */
+.radiusLg {
+  border-radius: 13px;
+}
+/* XL */
+.radiusXl {
+  border-radius: 20px;
+}

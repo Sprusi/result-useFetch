@@ -1,15 +1,18 @@
 import style from "./app.module.css";
-import { useToggle } from "./hooks/useToggle";
+import { Signin } from "./components/Signin";
+import { Signup } from "./components/Signup";
 
 function App() {
-  const [value, toggle] = useToggle(["light", "dark"]);
-
+  const finaly = (formData) => {
+    let message = "Данные из формы:\n";
+    for (let s in formData) message += ` ${s}: ${formData[s]}\n`;
+    alert(message);
+  };
   return (
-    <>
-      <p>{value.toString()}</p>
-      <button onClick={() => toggle()}>toggle</button>
-      <button onClick={() => toggle("dark")}>toggle("dark")</button>
-    </>
+    <div className={style.container}>
+      {/* <Signin onSubmit={finaly} /> */}
+      <Signup onSubmit={finaly}/>
+    </div>
   );
 }
 

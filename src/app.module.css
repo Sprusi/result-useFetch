@@ -1,8 +1,49 @@
-.wrapper {
-  padding: 20px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 80px 0;
 }
 
-.buttons {
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #ccc;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.form > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.formTitle {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 32px;
+  font-weight: normal;
+}
+
+.formButton {
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #2f74ff;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.formButton:hover {
+  background: #1d5bd9;
+}
+.formButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
 }
