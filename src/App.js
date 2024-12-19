@@ -1,19 +1,9 @@
 import style from "./app.module.css";
 import { Signin } from "./components/Signin";
-import { Signup } from "./components/Signup";
+import { Signup } from "./components/auth/Signup";
 
 function App() {
-  const finaly = (formData) => {
-    let message = "Данные из формы:\n";
-    for (let s in formData) message += ` ${s}: ${formData[s]}\n`;
-    alert(message);
-  };
-  return (
-    <div className={style.container}>
-      {/* <Signin onSubmit={finaly} /> */}
-      <Signup onSubmit={finaly}/>
-    </div>
-  );
+  return <div className={style.container}></div>;
 }
 
 export default App;

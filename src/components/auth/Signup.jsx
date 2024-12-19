@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "../app.module.css";
-import { TextInput } from "./text-input/TextInput";
+import { TextInput } from "../text-input/TextInput";
 
 export const Signup = ({ onSubmit }) => {
   const initValues = {
